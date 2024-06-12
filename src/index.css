@@ -13,3 +13,7 @@ body {
   min-height: 100vh;
   background-color: #fff;
 }
+.line{
+  width: 100%;
+  border: 1px solid #868282;
+}

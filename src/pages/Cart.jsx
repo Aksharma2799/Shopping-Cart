@@ -14,27 +14,31 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div className="">
+    <div className="flex w-11/12">
       {cart.length > 0 ? (
-        <div className="flex flex-row">
-          <div>
+        <div className="flex justify-center">
+          <div className="">
             {cart.map((item, index) => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
             })}
           </div>
 
           <div>
-            <div>
+            <div className="font-semibold">
               <div>Your Cart</div>
-              <div>Summary</div>
+              <div className="text-3xl text-green-600 font-semibold">
+                Summary
+              </div>
               <p>
-                <span>Total Items: {cart.length}</span>
+                <span className="font-bold">Total Items: {cart.length}</span>
               </p>
             </div>
 
-            <div>
+            <div className="my-44">
               <p>Total Amount: ${totalAmount}</p>
-              <button>CheckOut Now</button>
+              <button className=" flex text-green-900 font-semibold w-48 justify-center items-center bg-yellow-500 rounded-md border-none">
+                CheckOut Now
+              </button>
             </div>
           </div>
         </div>
